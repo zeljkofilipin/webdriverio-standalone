@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/zeljkofilipin/wdio-standalone/issues"
   },
-  "homepage": "https://github.com/zeljkofilipin/wdio-standalone#readme"
+  "homepage": "https://github.com/zeljkofilipin/wdio-standalone#readme",
+  "dependencies": {
+    "webdriverio": "^7.27.0"
+  }
 }
