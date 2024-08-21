@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/zeljkofilipin/wdio-standalone#readme",
   "devDependencies": {
-    "webdriverio": "^9.0.6"
+    "webdriverio": "^8.40.3"
   }
 }
