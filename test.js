@@ -4,6 +4,7 @@ const browser = await remote({
     capabilities: {
         browserName: 'chrome',
         'goog:chromeOptions': {
+            binary: '/Applications/chromium/mac_arm-982146/chrome-mac/Chromium.app/Contents/MacOS/Chromium', // macos chromium 101
             args: process.env.CI ? ['headless', 'disable-gpu'] : []
         }
     }
