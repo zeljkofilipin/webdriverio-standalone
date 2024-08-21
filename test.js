@@ -1,15 +1,18 @@
-const { remote } = require('webdriverio');
+import { remote } from 'webdriverio'
 
-(async () => {
 const browser = await remote({
-        capabilities: {
-            browserName: 'chrome'
-} });
+    capabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+        }
+    }
+})
 
-await browser.url('https://webdriver.io');
+await browser.url('https://webdriver.io')
 
-const title = await browser.getTitle();
-console.log('Title was: ' + title);
+const apiLink = await browser.$('=API')
+await apiLink.click()
 
-await browser.deleteSession();
-})().catch((e) => console.error(e));
+// await browser.saveScreenshot('./screenshot.png') // in v9 it fails with `ReferenceError: browser is not defined`
+await browser.deleteSession()

@@ -1,5 +1,6 @@
 {
   "name": "wdio-standalone",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,7 +18,7 @@
     "url": "https://github.com/zeljkofilipin/wdio-standalone/issues"
   },
   "homepage": "https://github.com/zeljkofilipin/wdio-standalone#readme",
-  "dependencies": {
-    "webdriverio": "7.36.0"
+  "devDependencies": {
+    "webdriverio": "^9.0.6"
   }
 }
