@@ -1,4 +1,6 @@
-import { remote } from 'webdriverio'
+const { remote } = require('webdriverio');
+
+(async () => {
 
 const browser = await remote({
     capabilities: {
@@ -17,3 +19,5 @@ await apiLink.click()
 
 await browser.saveScreenshot('./screenshot.png') // in v9 it fails with `ReferenceError: browser is not defined`
 await browser.deleteSession()
+
+})();
